@@ -70,7 +70,7 @@ const InputBox = () => {
     <>
       <div className='row mb-4 '>
         <div className='col-auto me-auto'>
-          <form action='#' className="input-group mb-3">
+          <div className="input-group mb-3">
 {/* on value change */}
             <input type="text" className='form-control border border-primary' placeholder='✍️ Add Items...'
               value={inputData}
@@ -78,14 +78,14 @@ const InputBox = () => {
                 setInputData(e.target.value)
               }}
             />
-            <button type="submit" className="btn btn-primary"
+            <button type="button" className="btn btn-primary"
               onClick={addItem}
             >
               {
                 toogleSubmit ? <><i className="fa-solid fa-circle-plus" /> Add Task</> : <><i className="fa-solid fa-pen-to-square" /> Edit Task</>
               }
             </button>
-          </form>
+          </div>
         </div>
         <div className='col-auto' role="group">
           <button type="button" className="btn btn-primary"
